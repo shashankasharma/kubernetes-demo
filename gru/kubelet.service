@@ -12,8 +12,7 @@ ExecStart=/opt/bin/kubelet \
 --port=10250 \
 --hostname-override=${COREOS_PRIVATE_IPV4} \
 --api-servers=127.0.0.1:8080 \
---register-node \
---log-dir="/home/core/kubelog/"
+--register-node 
 Restart=on-failure
 RestartSec=5
 
