@@ -1,10 +1,9 @@
 [Unit]
 Description=Kubernetes API Server
-After=etcd2.service
+After=etcd.service
 After=docker.service
-Wants=etcd2.service
+Wants=etcd.service
 Wants=docker.service
-
 
 [Service]
 ExecStart=/opt/bin/kube-apiserver \
@@ -21,4 +20,3 @@ RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
-

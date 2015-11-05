@@ -1,8 +1,8 @@
 [Unit]
 Description=Kubernetes proxy server
-After=etcd2.service
+After=etcd.service
 After=docker.service
-Wants=etcd2.service
+Wants=etcd.service
 Wants=docker.service
 
 [Service]
